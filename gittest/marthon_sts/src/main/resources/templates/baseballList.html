@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+ <head>
+  <title>一覧画面</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ </head>
+ <body>
+ <div align="center">
+   <h2>プロ野球</h2>
+   <h2>セントラル・リーグ一覧</h2>
+	   <ul style="list-style:none">
+		 <li th:each="data: ${teamList}">
+			  <p><a th:href="@{/baseballListDetail(id=${data.id})}"
+			   th:text="${data.team_name}"></a></p>
+		 </li>
+	  </ul>
+ </div>
+ </body>
+</html>

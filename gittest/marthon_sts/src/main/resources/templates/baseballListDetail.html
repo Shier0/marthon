@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>野球チーム</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body>
+    <div align="center">
+      <h2>参照画面</h2>
+    球団名
+	<p th:text="${teamDetail.team_name}">チーム名無し</p>
+	本拠地
+	<p th:text="${teamDetail.headquarters}">名無しの本拠地</p>
+	発足
+	<p th:text="${teamDetail.inauguration}">名無しの発足</p>
+	歴史
+	<pre th:text="${teamDetail.history}">名無しの歴史</pre>
+
+ 	<p><a th:href="@{/baseballList}">戻る</a></p>
+	</div>
+  </body>
+</html>
+
+
